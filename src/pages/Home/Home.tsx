@@ -1,10 +1,14 @@
+import HeroSections from '@/Components/sections/homeSections/heroSection/HeroSections';
 
 const Home = () => {
-  return (
-    <div>
-      dcdccfvfvfvffvfv
-    </div>
-  )
-}
+    return (
+        <>
+            {/* Navbar */}
 
-export default Home
+            {/* Hero Section */}
+            <HeroSections />
+        </>
+    );
+};
+
+export default Home;
