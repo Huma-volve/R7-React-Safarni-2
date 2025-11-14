@@ -1,13 +1,14 @@
 import Footer from "@/Components/Footer/Footer"
-import NavBar from "@/Components/NavBar/NavBar"
+import { lazy } from "react"
 import { Outlet } from "react-router"
 
+const Navbar = lazy(() => import("../Components/NavBar/NavBar"))
 const Layout = () => {
   return (
     <div>
-        <NavBar/>
-        <Outlet/>
-        <Footer/>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
   )
 }
