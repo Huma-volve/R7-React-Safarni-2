@@ -10,3 +10,9 @@ body {
   --main-text: #111928;
   --second-text: #6B7280;
 }
+.border-gradient {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, #3F52B4, #B22459);
+  border-image-slice: 1;
+}
+
