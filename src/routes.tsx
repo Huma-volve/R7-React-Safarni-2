@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Error from './pages/error/Error';
 import { lazy } from 'react';
 const Layout = lazy(() => import("./Layout/Layout"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Error = lazy(() => import("./pages/error/Error"));
+const MapPage = lazy(() => import("./pages/map/MapPage"));
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,22 @@ const router = createBrowserRouter([
         element: < Layout />,
         errorElement: <Error />,
         children: [
-            { path: '/', element: <Home /> },
+            {
+                path: '/', element: <Home />
+
+            },
+            {
+                path: 'map', element: <MapPage yourLatitude={30.033}
+                    yourLongitude={31.233}
+                    yourPois={[
+                        {
+                            lat: 30.04,
+                            lng: 31.20,
+                            name: "Test Hotel",
+                            type: "hotel"
+                        }
+                    ]} />
+            },
 
         ],
     },
